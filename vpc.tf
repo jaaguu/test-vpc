@@ -1,3 +1,6 @@
+provider "aws" {
+  region = "us-west-2"
+}
 # 01 create a VPC
 
 resource "aws_vpc" "dev-vpc" {
