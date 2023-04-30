@@ -1,6 +1,6 @@
 provider "aws" {
   region = "us-west-2"
-  profile = "default"
+  #profile = "default"
 }
 # 01 create a VPC
 
