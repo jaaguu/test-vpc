@@ -6,7 +6,7 @@ stages{
             git branch: 'main', credentialsId: 'github', url: 'https://github.com/jaaguu/Terraform_AWS_VPC.git'
         }
     }
-    stage('Terraform Init'){
+     stage('Terraform Init'){
         steps{
             sh '''terraform init'''
         }
@@ -16,9 +16,10 @@ stages{
             sh '''terraform plan'''
         }
     }
-    stage('Terraform Apply'){
+    stage('Terraform Action'){
         steps{
-            sh '''terraform destroy -auto-approve'''
+            echo "terraform action from the parameter is  -->  ${action}"
+            sh '''terraform ${action} --auto-approve''' 
         }
     }
 }
