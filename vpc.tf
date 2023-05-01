@@ -10,4 +10,5 @@ resource "aws_vpc" "dev-vpc" {
   tags = {
     Name = "dev-vpc"
 }
+}
  
